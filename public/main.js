@@ -36,7 +36,7 @@ function solve(n) {
     board.position(moveTo(solutions[cnt]))
     cnt++
     cnt %= solutions.length
-    setTimeout(next, 800)
+    setTimeout(next, 900)
   }
 })(_.shuffle(solve(8)))
 
