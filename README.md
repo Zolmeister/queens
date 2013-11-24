@@ -1,12 +1,11 @@
 8 Queens
 ========
-## Visualization
+### http://en.wikipedia.org/wiki/Eight_queens_puzzle
+
+### Visualization
 #### http://queens.zolmeister.com/
 
-## Puzzle
-#### http://en.wikipedia.org/wiki/Eight_queens_puzzle
-
-# The Solution
+### The Solution
 ```javascript
 function solve(n) {
   var ans = []
@@ -32,3 +31,4 @@ function solve(n) {
   }
 }
 ```
+![8 Queens](https://raw.github.com/Zolmeister/queens/master/screenshot.png)
