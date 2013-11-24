@@ -6,7 +6,7 @@
 ## Puzzle
 #### http://en.wikipedia.org/wiki/Eight_queens_puzzle
 
-# The solution
+# The Solution
 ```javascript
 function solve(n) {
   var ans = []
