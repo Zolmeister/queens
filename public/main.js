@@ -29,6 +29,8 @@ function solve(n) {
     position: '1/1/2/1q1q1q1q/q1q1q1q1/1/1/1'
   });
   
+  board.cache()
+  
   next()
   function next() {
     board.position(moveTo(solutions[cnt]))
