@@ -28,9 +28,9 @@ function solve(n) {
     moveSpeed: 'slow',
     position: '1/1/2/1q1q1q1q/q1q1q1q1/1/1/1'
   });
-  
+
   board.cache()
-  
+
   next()
   function next() {
     board.position(moveTo(solutions[cnt]))
@@ -40,13 +40,12 @@ function solve(n) {
   }
 })(_.shuffle(solve(8)))
 
-$('#source').html('<code>'+solve.toString()+'</code>')
 hljs.initHighlightingOnLoad();
 
 function moveTo(solution) {
   var colToLet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
   var pos = {}
-  
+
   for(var i=0, l=solution.length; i < l; i++) {
     var col = i
     var row = solution[i]

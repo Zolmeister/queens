@@ -5,7 +5,7 @@
 <link rel='stylesheet' type='text/css' href='css/chessboard-0.3.0.min.css'>
 <link rel='stylesheet' type='text/css' href='css/highlight/tomorrow.css'>
 <link rel='stylesheet' type='text/css' href='css/main.css'>
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <script>
@@ -18,7 +18,29 @@
   ga('send', 'pageview');
 
 </script>
-<pre id='source'></pre>
+<pre id='source'><code>function solve(n) {
+  var ans = []
+  solver([])
+  return ans
+  function solver(current) {
+    if (current.length === n)
+      ans.push(current)
+    else
+      for (var i=0; i < n; i++) {
+        for (var j=0, l=current.length; j < l; j++) {
+          var prev = current[j]
+          if (prev === i)
+            break
+          if (prev-(l-j) === i)
+            break
+          if (prev+(l-j) === i)
+            break
+        }
+        if (j === l)
+          solver(current.concat([i]))
+      }
+  }
+}</code></pre>
 <div class='header-title'>8 Queens<div class='sub-title'>by <a href='http://zolmeister.com'>Zolmeister</a></div></div>
 <div class='center'>
   <div id="board" style='width: 501px;'></div>
