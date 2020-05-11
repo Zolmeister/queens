@@ -647,7 +647,7 @@ function cacheImages() {
     }
     img.src = buildPieceImgSrc(piece)
   })
-  
+
   function getBase64Image(img) {
     var canvas = document.createElement("canvas");
     canvas.width = img.width;
@@ -655,14 +655,14 @@ function cacheImages() {
     var ctx = canvas.getContext("2d");
     ctx.drawImage(img, 0, 0);
     var dataURL = canvas.toDataURL("image/png");
-    return dataURL;     
+    return dataURL;
   }
 }
 
 function buildPieceImgSrc(piece) {
   if(imgCache[piece]) return imgCache[piece]
   else return getUrl(piece)
-  
+
   function getUrl(piece) {
     if (typeof cfg.pieceTheme === 'function') {
       return cfg.pieceTheme(piece);
